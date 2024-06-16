@@ -7,6 +7,8 @@ use App\Classes\Template;
 $template = new Template;
 $twig = $template->init();
 
+$twig->addFunction($site_url);
+
 /**
  * Chamando o controller digitado na URL
  * http://localhost:8888/controller

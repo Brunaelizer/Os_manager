@@ -1,0 +1,39 @@
+.navbar{
+    position: absolute;
+    height: 60px;
+    width: calc(100% - 280px);
+    left: 280px;
+    background: #1e1c33;
+    align-content: center;
+}
+
+.navbar .nav-left{
+    float: left;
+    font-size: 30px;
+    color: #fff;    
+    display: flex;
+    padding-left: 30px;
+}
+
+.navbar .nav-left .company-logo{
+    padding-right: 30px;
+}
+
+.navbar .nav-right{
+    font-size: 20px;
+    color: #fff;    
+    float: right;
+    padding-right: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-right .user-img{
+    font-size: 35px;
+    padding-left: 20px;
+}
+.navbar .nav-right .user-img-down{
+    font-size: 15px;
+    padding-left: 2px;
+}
+
