@@ -21,9 +21,9 @@
   </head>
   <body>
     <div class="main-container">
-      <div class="header">{% block header %}{% endblock %}</div>
+      <div class="header">{% include 'header.html' %}</div>
       <div class="content-body"></div>
-      <div class="footer"></div>
+      <div class="footer">{% include 'footer.html' %}</div>
     </div>
   </body>
 </html>
