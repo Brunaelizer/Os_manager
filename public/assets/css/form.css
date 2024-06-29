@@ -1,0 +1,21 @@
+
+
+.form{
+    color:black;
+}
+
+.form .row{
+    padding-bottom: 20px;
+}
+
+.card .card-body{
+    padding: 2% 10%;
+}
+
+.card .row{
+    text-align: center;
+}
+
+.card .row label{
+    line-height: 38px;
+}
