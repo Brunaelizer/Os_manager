@@ -8,6 +8,7 @@ $template = new Template;
 $twig = $template->init();
 
 $twig->addFunction($site_url);
+$twig->addFunction($menu);
 
 /**
  * Chamando o controller digitado na URL
