@@ -7,54 +7,14 @@
       <i name="menu" id="btn-menu" class="fa-solid fa-bars"></i>
     </div>
     <ul class="nav-itens">
+      {% set i=0 %} {% for item in menu() %}
       <li>
-        <a href="../../home.php">
-          <i class="fa-solid fa-house"></i>
-          <span class="links-names">Início</span>
+        <a href="{{ item.page_path }}">
+          <i class="{{ item.icon }}"></i>
+          <span class="links-names">{{ item.name_menu }}</span>
         </a>
       </li>
-      <li>
-        <a href="../../pages/PDT/PDT001.php">
-          <i class="fa-solid fa-basket-shopping"></i>
-          <span class="links-names">Produtos</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="fa-solid fa-toolbox"></i>
-          <span class="links-names">Serviços</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="fa-regular fa-handshake"></i>
-          <span class="links-names">Clientes</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="fa-solid fa-car"></i>
-          <span class="links-names">Veículos</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="fa-solid fa-list-check"></i>
-          <span class="links-names">Ordens de serviço</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="fa-solid fa-user"></i>
-          <span class="links-names">Usuários</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="fa-solid fa-gear"></i>
-          <span class="links-names">Configurações</span>
-        </a>
-      </li>
+      {% set i = i+1 %} {% endfor %}
     </ul>
   </div>
   <div class="navbar">

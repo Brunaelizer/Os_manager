@@ -6,7 +6,7 @@ namespace App\Repositories\Site;
 use App\Models\Site\ProdutoModel;
 
 
-class ProdutoReposotory
+class ProdutoRepository
 {
     private $produto;
 
