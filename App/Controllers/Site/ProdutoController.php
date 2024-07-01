@@ -8,7 +8,7 @@ class ProdutoController extends BaseController
 {
     public function index($parameters)
     {
-        dump($parameters);
+        dump("teste");
     }
 
     public function teste($parameters)
