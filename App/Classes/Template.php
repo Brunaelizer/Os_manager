@@ -7,7 +7,7 @@ class Template
 
     public function loader()
     {
-        return new \Twig\Loader\FilesystemLoader(['../App/Views/Site', '../App/Views/Admin', '../App/Views/Masters']);
+        return new \Twig\Loader\FilesystemLoader(['../App/Views/Site', '../App/Views/Admin', '../App/Views/Masters', '../App/Views/General']);
     }
 
     public function init()

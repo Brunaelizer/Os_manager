@@ -8,7 +8,7 @@ class Controller
 {
 
     const NAMESPACE_CONTROLLER = '\\App\\Controllers\\';
-    const FOLDERS_CONTROLLER = ['Site', 'Admin'];
+    const FOLDERS_CONTROLLER = ['Site', 'Admin', 'General'];
     const ERROR_CONTROLLER = '\\App\\Controllers\\Error\\ErrorController';
 
     private $uri;

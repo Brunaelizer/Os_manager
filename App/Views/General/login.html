@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous" />
+    <link href="{{ site_url() }}/assets/css/login.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <main>
+      <form action="/login/enter" method="POST">
+        <div class="container">
+          <div class="box bg-body rounded shadow-sm my-3 p-3">
+            <div class="box-content">
+              <div class="box-header">
+                <div class="row">
+                  <h1>SRO Manager</h1>
+                </div>
+              </div>
+              <div class="box-input">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="col-md-3">
+                      <label for="f_email">Usuário</label>
+                    </div>
+                    <div class="col-md-12">
+                      <input
+                        class="form-control"
+                        type="text"
+                        id="f_email"
+                        name="f_email" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="box-input">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="col-md-3">
+                      <label for="f_senha">Senha</label>
+                    </div>
+                    <div class="col-md-12">
+                      <input
+                        class="form-control"
+                        type="password"
+                        id="f_password"
+                        name="f_password" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="box-input">
+                <div class="row">
+                  <div class="col-md-12 center">
+                    <button type="submit" class="btn btn-primary">
+                      Entrar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

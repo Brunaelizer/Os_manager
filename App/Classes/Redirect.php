@@ -12,6 +12,6 @@ class Redirect
             return header('Location:/');
         }
 
-        return header('Location:$redirect');
+        return header("Location:$redirect");
     }
 }
