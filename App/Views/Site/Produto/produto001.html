@@ -1,0 +1,43 @@
+{% extends 'base_page.html' %} {% block site_content %}
+
+<div class="page">
+  <div class="page-head">
+    <div class="page-title">
+      <div class="main-title">
+        <h1>Produtos</h1>
+      </div>
+      <div class="sub-title">
+        <h4>Consulta</h4>
+      </div>
+    </div>
+  </div>
+  <div class="page-body">
+    <div class="page-navbar">
+      <a href="/produto/novo"
+        ><button type="button" class="btn btn-success btn-add">
+          <i class="fa-solid fa-plus"></i></button
+      ></a>
+      <button type="button" class="btn btn-primary btn-edit">
+        <i class="fa-solid fa-pencil"></i>
+      </button>
+      <button type="button" class="btn btn-danger btn-delete">
+        <i class="fa-solid fa-trash"></i>
+      </button>
+    </div>
+
+    <div class="page-table">
+      <table class="table table-hover table-striped table-bordered table-list">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Código</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

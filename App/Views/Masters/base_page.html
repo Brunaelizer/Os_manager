@@ -22,7 +22,7 @@
   <body>
     <div class="main-container">
       <div class="header">{% include 'header.html' %}</div>
-      <div class="content-body"></div>
+      <div class="content-body">{% block site_content %}{% endblock %}</div>
       <div class="footer">{% include 'footer.html' %}</div>
     </div>
   </body>

@@ -2,7 +2,7 @@
 
 namespace App\Classes;
 
-class UserLoggedIn
+class Access
 {
     public function loggedin()
     {

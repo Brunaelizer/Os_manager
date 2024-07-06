@@ -9,6 +9,7 @@ if (preg_match('/\.(?:png|jpg|jpeg|gif)$/', $_SERVER["REQUEST_URI"])) {
     session_start();
 
     define('DEFAULT_CONTROLLER', 'home');
+    define('NOT_LOGGED_CONTROLLER', 'login');
     define('DEFAULT_METHOD', 'index');
 
     require '../vendor/autoload.php';

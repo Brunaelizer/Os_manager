@@ -1,0 +1,110 @@
+{% extends 'base_page.html' %} {% block site_content %}
+
+<div class="page">
+  <div class="page-head">
+    <div class="page-title">
+      <div class="main-title">
+        <h1>Produtos</h1>
+      </div>
+      <div class="sub-title">
+        <h4>Incluir/Editar</h4>
+      </div>
+    </div>
+  </div>
+  <div class="page-body">
+    <form method="POST" action="/produto/save">
+      <div class="page-navbar">
+        <a href="produto"
+          ><button type="button" class="btn btn-secondary btn-add">
+            <i class="fa-regular fa-circle-left"></i></button
+        ></a>
+        <button type="submit" class="btn btn-success btn-add">
+          <i class="fa-regular fa-floppy-disk"></i>
+        </button>
+      </div>
+
+      <div class="form">
+        <div class="card">
+          <div class="card-header">
+            <i class="fa-solid fa-address-card"></i> Geral
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-2">
+                <label for="name">Nome</label>
+              </div>
+              <div class="col-md-8">
+                <input id="nome" name="nome" class="form-control" type="text" />
+              </div>
+              {{ errorField('nome') | raw }}
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <label for="f_codigo">Marca</label>
+              </div>
+              <div class="col-md-8">
+                <input id="f_codigo" class="form-control" type="text" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <label>Referência</label>
+              </div>
+              <div class="col-md-4">
+                <input class="form-control" type="text" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <label>Status</label>
+              </div>
+              <div class="col-md-2">
+                <select class="form-select">
+                  <option value="A">Ativo</option>
+                  <option value="I">Inativo</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <i class="fa-solid fa-dollar-sign"></i> Valores
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-2">
+                <label for="f_codigo">Preço do forneçedor</label>
+              </div>
+              <div class="col-md-2">
+                <input id="f_codigo" class="form-control" type="number" />
+              </div>
+              <div class="col-md-2">
+                <label for="f_codigo">Preço de custo</label>
+              </div>
+              <div class="col-md-2">
+                <input id="f_codigo" class="form-control" type="number" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <label for="f_codigo">Markup de venda</label>
+              </div>
+              <div class="col-md-2">
+                <input id="f_codigo" class="form-control" type="number" />
+              </div>
+              <div class="col-md-2">
+                <label for="f_codigo">Preço de venda</label>
+              </div>
+              <div class="col-md-2">
+                <input id="f_codigo" class="form-control" type="number" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

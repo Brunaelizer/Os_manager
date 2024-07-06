@@ -1,6 +1,7 @@
 <?php
 
 use App\Classes\Parameters;
+use App\Classes\Redirect;
 use App\Classes\Template;
 use App\Classes\UserLoggedIn;
 use App\Controllers\Controller;
@@ -11,6 +12,8 @@ $twig = $template->init();
 
 $twig->addFunction($site_url);
 $twig->addFunction($menu);
+$twig->addFunction($user);
+$twig->addFunction($errorField);
 
 
 /**
@@ -28,7 +31,6 @@ $controller->setTwig($twig);
  */
 $callMethod = new Method;
 $method = $callMethod->method($controller);
-
 
 /**
  * Chamando o controller pela classe controller e pelo metodo

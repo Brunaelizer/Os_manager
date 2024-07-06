@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Classes\Access;
 use App\Classes\Uri;
 
 class Controller
@@ -20,6 +21,12 @@ class Controller
 
     private function getController()
     {
+        $access = new Access();
+
+        if (!$access->loggedin()) {
+            return ucfirst(NOT_LOGGED_CONTROLLER) . 'Controller';
+        }
+
         if (!$this->uri->emptyUri()) {
             $explodeUri = array_filter(explode('/', $this->uri->getUri()));
 

@@ -2,17 +2,55 @@
 
 namespace App\Controllers\Site;
 
+use App\Classes\ErrorsValidate;
+use App\Classes\Validate;
 use App\Controllers\BaseController;
 
 class ProdutoController extends BaseController
 {
-    public function index($parameters)
+    private $errorValidate;
+    private $validate;
+
+    public function __construct()
     {
-        dump("teste");
+        $this->validate = new Validate();
+        $this->errorValidate = new ErrorsValidate();
     }
 
-    public function teste($parameters)
+    public function index($parameters)
     {
-        dump($parameters);
+        $dados = [
+            'titulo' => 'SRO Manager'
+        ];
+
+        $template = $this->twig->load('produto001.html');
+        $template->display($dados);
+    }
+
+    public function novo($parameters)
+    {
+        $dados = [
+            'titulo' => 'SRO Manager'
+        ];
+
+        $template = $this->twig->load('produto002.html');
+        $template->display($dados);
+    }
+
+    public function save()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $rules = [
+                'nome' => 'required'
+            ];
+
+            $this->validate->validate($rules);
+
+            if (empty($this->errorValidate->errorsValidate())) {
+                dump("nenhum erro");
+            } else {
+                dump("erro");
+            }
+        }
     }
 }
